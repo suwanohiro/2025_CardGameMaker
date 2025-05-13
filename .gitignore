@@ -1,0 +1,20 @@
+# Deno cache
+/.deno
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node.js関連（もし使っている場合）
+node_modules/
+package-lock.json
+yarn.lock
+
+# その他の一時ファイル
+*.tmp
+*.swp
+*.bak
+*.old

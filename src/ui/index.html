@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Maker</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <table id="main">
+        <tr>
+            <td class="section">
+                <div>
+                    <span class="setting_title">カラー</span>
+                    <select id="color">
+                        <option value="lightcoral">赤</option>
+                        <option value="lightblue">青</option>
+                        <option value="lightgreen">緑</option>
+                        <option value="lightyellow">黄</option>
+                        <option value="white">白</option>
+                    </select>
+                </div>
+                <div>
+                    <span class="setting_title">名前</span>
+                    <input type="text" id="name">
+                </div>
+                <div>
+                    <span class="setting_title">画像</span>
+                    <input type="file" id="image" accept="image/*">
+                </div>
+                <div>
+                    <span class="setting_title">位置：X <span id="posX_value" class="pos">50</span></span>
+                    <input type="range" id="posX" min="0" max="100" value="50">
+                </div>
+                <div>
+                    <span class="setting_title">位置：Y <span id="posY_value" class="pos">50</span></span>
+                    <input type="range" id="posY" min="0" max="100" value="50">
+            </td>
+            <td class="section">
+                <div id="card">
+                    <div class="card_info" id="card_name">カード名</div>
+                    <div class="card_info" id="card_image"></div>
+                    <div class="card_info" id="card_text"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

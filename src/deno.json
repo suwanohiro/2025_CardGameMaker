@@ -1,0 +1,15 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-read --allow-net --allow-env --allow-run main.ts",
+    "start": "deno run --allow-read --allow-net --allow-env --allow-run main.ts"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1",
+    "webview": "https://deno.land/x/webview/mod.ts",
+    "@denosaurs/plug": "https://deno.land/x/plug@1.10.0/mod.ts",
+    "@std/fmt/colors": "https://deno.land/std@0.203.0/fmt/colors.ts",
+    "@std/fs": "https://deno.land/std@0.203.0/fs/mod.ts",
+    "@std/path": "https://deno.land/std@0.203.0/path/mod.ts",
+    "@std/encoding/hex": "https://deno.land/std@0.203.0/encoding/hex.ts"
+  }
+}
