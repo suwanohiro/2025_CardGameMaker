@@ -1,29 +1,56 @@
+:root {
+    --editorBackgroundColor: #181818;
+    --settingGroupBackgroundColor: #1F1F1F;
+    --settingGroupBorderColor: gray;
+    --defaultFontColor: white;
+    --defaultBorderColor: white;
+    --cardInfoBorderColor: #00000050;
+    --cardColorLight: #FFFFFF40;
+    --shadowColor: #00000040;
+    --shadowSetting: 0 0.25rem 1rem 0 var(--shadowColor), 0 0.5rem 2rem 0 var(--shadowColor);
+}
+
 * {
     margin: 0;
     padding: 0;
-    color: white;
-    border-color: white;
+    color: var(--defaultFontColor);
+    border-color: var(--defaultBorderColor);
     user-select: none;
+}
+
+html {
+    background-color: var(--editorBackgroundColor);
 }
 
 #main {
     width: 100%;
     height: 100vh;
 
-    background-color: #1F1F1F;
+    background-color: var(--editorBackgroundColor);
 
     .section {
-        width: 50%;
+        width: 50vw;
+    }
+
+    tr {
+        height: 100%;
     }
 }
 
 .section:nth-child(1) {
-    padding: 2rem;
-    vertical-align: top;
+    height: 99.5vh;
+    display: block;
     border-right: 0.1rem dashed;
+    overflow-y: scroll;
 
     * {
         font-size: 2rem;
+    }
+
+    .setting_title,
+    .setting_value {
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
     }
 
     .setting_title {
@@ -31,8 +58,10 @@
         width: 27.5%;
         border-right: 0.1rem solid;
         margin-right: 2.5%;
-        margin-bottom: 0.5rem;
         font-size: 75%;
+        vertical-align: top;
+
+        padding-left: 1rem;
     }
 
     .setting_title * {
@@ -40,29 +69,150 @@
     }
 
     input,
-    select {
+    select,
+    #rich_text {
         width: 60%;
-        background-color: #1F1F1F;
+        background-color: var(--editorBackgroundColor);
     }
 }
 
+.section:nth-child(1)::-webkit-scrollbar {
+    width: 0;
+}
+
 .section:nth-child(2) {
+    vertical-align: top;
     text-align: center;
 }
 
+.setting_group {
+    margin: 2rem;
+    border: 0.0625rem solid var(--settingGroupBorderColor);
+    border-radius: 0.25rem;
+    background-color: var(--settingGroupBackgroundColor);
+
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    vertical-align: top;
+}
+
+.section:nth-child(1)>.setting_group:first-of-type {
+    margin-top: 2rem;
+    border: 0;
+    background-color: transparent;
+}
+
+.select_color {
+    aspect-ratio: 1/1;
+    display: inline-block;
+    width: 2.5rem;
+    border-radius: 10rem;
+    transform: translateY(0.5rem);
+
+    margin-inline: 0.5rem;
+    border: 0.0625rem solid white;
+}
+
+.select_color:hover {
+    cursor: pointer;
+    filter: brightness(50%);
+}
+
+#rich_text {
+    display: inline-block;
+    border: 1px solid #ccc;
+    aspect-ratio: 16/9;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: var(--settingGroupBackgroundColor);
+    color: white;
+
+    * {
+        font-size: 1rem;
+    }
+
+    b {
+        color: #4FC1FF;
+    }
+
+    i {
+        color: #33BBB0;
+    }
+
+    u {
+        color: #DCDCAA;
+    }
+}
+
+#rich_text_help {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 62.5%;
+    filter: brightness(62.5%);
+
+    margin-left: 27.5%;
+    margin-bottom: 0.5rem;
+
+    transform: translateX(2.125rem);
+
+    * {
+        font-size: 1rem;
+    }
+
+    table {
+        background-color: white;
+    }
+
+    td,
+    th {
+        background-color: var(--editorBackgroundColor);
+        padding: 0.25rem;
+        padding-inline: 2.5rem;
+    }
+}
+
+#save {
+    background-color: #0078D4;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 0;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    transition: transform 0.2s;
+    transition: filter 0.2s;
+    margin-bottom: 2.5rem;
+}
+
+#save:hover {
+    filter: brightness(75%);
+}
+
+#save:active {
+    transform: scale(0.975);
+}
+
 #card {
+    --radius: 0.5rem;
+
+    border-radius: var(--radius);
+
+    * {
+        border-radius: var(--radius);
+    }
+
     display: flex;
     width: 70%;
     aspect-ratio: 3/4;
     /* Flexboxを有効化 */
     flex-direction: column;
     /* 子要素を縦方向に配置 */
-    background-color: lightcoral;
+    background-color: #6D0F0F;
     border: 0.1rem solid;
+    margin-top: 2rem;
     margin-left: 15%;
 
     padding-top: 2.5%;
-    padding-bottom: 2.5%;
+    padding-bottom: 2rem;
 }
 
 #card * {
@@ -70,8 +220,18 @@
 }
 
 #card .card_info {
-    border: 0.1rem solid black;
+    border: 0.1rem solid var(--cardInfoBorderColor);
+    /* box-shadow: var(--shadowSetting); */
     padding: 0.5rem;
+    text-align: left;
+}
+
+#card .card_info:nth-child(1) {
+    border: 0;
+    background-color: var(--cardColorLight);
+    /* box-shadow: var(--shadowSetting); */
+    border: 0.125rem solid var(--shadowColor);
+    margin-bottom: 1rem;
 }
 
 #card #card_name {
@@ -80,6 +240,7 @@
     font-weight: bold;
     font-size: 2rem;
 
+    margin-left: 1rem;
     margin-bottom: 2.5%;
 }
 
@@ -93,11 +254,35 @@
 
 #card #card_text {
     display: block;
-    background-color: lightgreen;
+    background-color: var(--cardColorLight);
 
     margin-top: 2.5%;
     flex-grow: 1;
     /* 残りの高さを占有 */
+}
+
+#card #card_cost {
+    display: inline-block;
+    aspect-ratio: 1/1;
+    text-align: center;
+    font-weight: bold;
+    width: 2.5rem;
+    margin: 0rem;
+    padding: 0.25rem;
+    font-size: 1.5rem;
+    border: 0.25rem solid black;
+    border-radius: 10rem;
+    color: yellow;
+    background-color: black;
+}
+
+#card #card_text {
+    text-align: left;
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .pos::before {

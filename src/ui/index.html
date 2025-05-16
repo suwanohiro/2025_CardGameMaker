@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Maker</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="./js/setting_title.js"></script>
     <script src="./js/script.js"></script>
 </head>
 
@@ -13,35 +15,60 @@
     <table id="main">
         <tr>
             <td class="section">
-                <div>
-                    <span class="setting_title">カラー</span>
-                    <select id="color">
-                        <option value="lightcoral">赤</option>
-                        <option value="lightblue">青</option>
-                        <option value="lightgreen">緑</option>
-                        <option value="lightyellow">黄</option>
-                        <option value="white">白</option>
-                    </select>
+                <div class="setting_group">
+                    <button id="save">保存</button>
                 </div>
-                <div>
-                    <span class="setting_title">名前</span>
-                    <input type="text" id="name">
+                <div class="setting_group">
+                    <span id="setting_color" class="setting_value" data-name="カラー"></span>
                 </div>
-                <div>
-                    <span class="setting_title">画像</span>
-                    <input type="file" id="image" accept="image/*">
+                <div class="setting_group">
+                    <input type="text" class="setting_value" id="name" data-name="名前" placeholder="カード名">
                 </div>
-                <div>
-                    <span class="setting_title">位置：X <span id="posX_value" class="pos">50</span></span>
-                    <input type="range" id="posX" min="0" max="100" value="50">
+                <div class="setting_group">
+                    <input type="file" class="setting_value" id="image" accept="image/*" data-name="画像">
+                    <div>
+                        <input type="range" class="setting_value" id="posX" min="0" max="100" value="50"
+                            data-name="X座標">
+                    </div>
+                    <div>
+                        <input type="range" class="setting_value" id="posY" min="0" max="100" value="50"
+                            data-name="Y座標">
+                    </div>
                 </div>
-                <div>
-                    <span class="setting_title">位置：Y <span id="posY_value" class="pos">50</span></span>
-                    <input type="range" id="posY" min="0" max="100" value="50">
+                <div class="setting_group">
+                    <input type="range" class="setting_value" id="cost" min="1" max="10" value="1" data-name="コスト">
+                </div>
+                <div class="setting_group">
+                    <div id="rich_text" class="setting_value" data-name="効果文" contenteditable="true">
+                    </div>
+                    <div id="rich_text_help">
+                        <table>
+                            <tr>
+                                <th>キー</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr>
+                                <td>Ctrl + B</td>
+                                <td>太字 (エディタ上 青色)</td>
+                            </tr>
+                            <tr>
+                                <td>Ctrl + I</td>
+                                <td>斜体 (エディタ上 緑色)</td>
+                            </tr>
+                            <tr>
+                                <td>Ctrl + U</td>
+                                <td>下線 (エディタ上 黄色)</td>
+                            </tr>
+                        </table>
+                        ※色効果は単一の操作の場合に限ります。<br>
+                        &emsp;複数の操作を同一文字に適用させた場合、<br>
+                        &emsp;最後に適用させた操作の色になります。
+                    </div>
+                </div>
             </td>
             <td class="section">
                 <div id="card">
-                    <div class="card_info" id="card_name">カード名</div>
+                    <div class="card_info"><span id="card_cost">1</span><span id="card_name">カード名</span></div>
                     <div class="card_info" id="card_image"></div>
                     <div class="card_info" id="card_text"></div>
                 </div>
