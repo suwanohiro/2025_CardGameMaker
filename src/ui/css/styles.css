@@ -74,6 +74,16 @@ html {
         width: 60%;
         background-color: var(--editorBackgroundColor);
     }
+
+    input[type="text"] {
+        border: 0;
+        border-bottom: 0.1rem solid white;
+    }
+
+    input[type="text"]:focus {
+        outline: none;
+        border-color: #0078D4;
+    }
 }
 
 .section:nth-child(1)::-webkit-scrollbar {
