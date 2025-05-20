@@ -1,0 +1,21 @@
+/* 縦横関連サイズ */
+:root {
+    /* ------------------------------------------ */
+    /* id */
+    /* ------------------------------------------ */
+
+    /* #main */
+    --size__dimension__main_width: 100%;
+    --size__dimension__main_height: 100vh;
+
+    /* ------------------------------------------ */
+    /* class */
+    /* ------------------------------------------ */
+
+    /* .section */
+    --size__dimension__section_width: 50vw;
+    --size__dimension__section_height: 99.5vh;
+
+    /* .section:nth-child(1) */
+    --size__dimension__inputElement_width: 60%;
+}

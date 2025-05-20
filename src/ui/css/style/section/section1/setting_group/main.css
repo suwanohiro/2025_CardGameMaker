@@ -1,0 +1,10 @@
+@import url("./setting_group.css");
+@import url("./setting_title/setting_title.css");
+@import url("./setting_value/setting_value.css");
+
+@import url("./rich_text/main.css");
+@import url("./select_color/select_color.css");
+@import url("./image/main.css");
+
+@import url("./input/input.css");
+@import url("./select/select.css");

@@ -1,0 +1,7 @@
+/* 背景色 */
+:root {
+    --color__background__button: #0078D4;
+
+    --color__background__base: #181818;
+    --color__background__settingGroup: #1F1F1F;
+}

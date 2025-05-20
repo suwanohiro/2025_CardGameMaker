@@ -1,0 +1,22 @@
+#card {
+    border-radius: var(--size__radius__card);
+
+    display: flex;
+    width: 70%;
+    aspect-ratio: var(--aspect__3_4);
+    /* Flexboxを有効化 */
+    flex-direction: column;
+    /* 子要素を縦方向に配置 */
+    background-color: var(--color__background__card__red);
+    border: 0.1rem solid;
+    margin-top: 2rem;
+    margin-left: 15%;
+
+    padding-top: 2.5%;
+    padding-bottom: 2rem;
+}
+
+#card * {
+    margin-inline: 10%;
+    border-radius: var(--size__radius__card);
+}

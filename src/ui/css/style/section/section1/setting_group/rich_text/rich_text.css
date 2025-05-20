@@ -1,0 +1,28 @@
+#rich_text {
+    width: var(--size__dimension__inputElement_width);
+
+    display: inline-block;
+    border: 1px solid #ccc;
+    aspect-ratio: var(--aspect__16_9);
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: white;
+
+    background-color: var(--color__background__base);
+}
+
+#rich_text * {
+    font-size: 1rem;
+}
+
+#rich_text b {
+    color: var(--color__font__bold);
+}
+
+#rich_text i {
+    color: var(--color__font__italic);
+}
+
+#rich_text u {
+    color: var(--color__font__underline);
+}

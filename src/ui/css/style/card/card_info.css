@@ -1,0 +1,12 @@
+#card .card_info {
+    border: 0.1rem solid var(--color__border__cardInfo);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+#card .card_info:nth-child(1) {
+    border: 0;
+    background-color: var(--color__background__card__light);
+    border: 0.125rem solid var(--shadowColor);
+    margin-bottom: 1rem;
+}

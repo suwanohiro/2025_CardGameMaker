@@ -1,0 +1,23 @@
+.section:nth-child(1) .setting_title {
+    display: inline-block;
+    width: 27.5%;
+    border-right: 0.1rem solid;
+    margin-right: 2.5%;
+    font-size: var(--size__font__setting_title);
+    vertical-align: top;
+
+    padding-left: 1rem;
+
+    margin-top: var(--size__margin__setting_item);
+    margin-bottom: var(--size__margin__setting_item);
+}
+
+.section:nth-child(1)>.setting_group:first-of-type {
+    margin-top: 2rem;
+    border: 0;
+    background-color: transparent;
+}
+
+.section:nth-child(1) .setting_title * {
+    font-size: var(--size__font__setting_title);
+}

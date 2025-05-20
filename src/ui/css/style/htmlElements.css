@@ -1,0 +1,19 @@
+html {
+    background-color: var(--color__background__base);
+}
+
+button {
+    background-color: var(--color__background__button);
+    border-radius: 0.5rem;
+    border: 0;
+    transition: transform var(--time__transition__default);
+    transition: filter var(--time__transition__default);
+}
+
+button:hover {
+    filter: brightness(75%);
+}
+
+button:active {
+    transform: scale(0.975);
+}

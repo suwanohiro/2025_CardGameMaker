@@ -1,0 +1,7 @@
+.section:nth-child(1) .pos::before {
+    content: "( ";
+}
+
+.section:nth-child(1) .pos::after {
+    content: "% )";
+}

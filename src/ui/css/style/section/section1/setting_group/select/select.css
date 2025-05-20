@@ -1,0 +1,4 @@
+select {
+    width: var(--size__dimension__inputElement_width);
+    background-color: var(--color__background__base);
+}

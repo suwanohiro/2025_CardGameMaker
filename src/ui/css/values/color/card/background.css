@@ -1,0 +1,9 @@
+/* カードの背景色 */
+:root {
+    --color__background__card__light: #FFFFFF40;
+    --color__background__card__red: #6D0F0F;
+    --color__background__card__blue: #1A8CFF;
+    --color__background__card__green: #57B72B;
+    --color__background__card__yellow: #E6DB00;
+    --color__background__card__white: #DFDFDF;
+}

@@ -1,0 +1,5 @@
+/* フォントサイズ */
+:root {
+    --size__font__setting_title: 75%;
+    --size__font__card_name: 2rem;
+}

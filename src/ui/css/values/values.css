@@ -1,0 +1,11 @@
+/* アスペクト比 */
+@import url("./aspect/aspect.css");
+
+/* 色 */
+@import url("./color/color.css");
+
+/* サイズ */
+@import url("./size/size.css");
+
+/* 時間 */
+@import url("./time/time.css");

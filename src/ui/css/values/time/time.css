@@ -1,0 +1,4 @@
+/* 時間の定義 */
+:root {
+    --time__transition__default: 0.2s;
+}

@@ -1,0 +1,7 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--color__font__default);
+    border-color: var(--color__border__default);
+    user-select: none;
+}

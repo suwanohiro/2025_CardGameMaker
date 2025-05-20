@@ -1,0 +1,4 @@
+#image_button {
+    width: var(--size__dimension__inputElement_width);
+    transform: translateY(0.5rem);
+}

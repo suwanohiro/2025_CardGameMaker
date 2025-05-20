@@ -1,0 +1,9 @@
+#card #card_name {
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    font-size: var(--size__font__card_name);
+
+    margin-left: 1rem;
+    margin-bottom: 2.5%;
+}

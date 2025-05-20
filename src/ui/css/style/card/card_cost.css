@@ -1,0 +1,14 @@
+#card #card_cost {
+    display: inline-block;
+    aspect-ratio: var(--aspect__1_1);
+    text-align: center;
+    font-weight: bold;
+    width: 2.5rem;
+    margin: 0rem;
+    padding: 0.25rem;
+    font-size: 1.5rem;
+    border: 0.25rem solid black;
+    border-radius: 10rem;
+    color: yellow;
+    background-color: black;
+}

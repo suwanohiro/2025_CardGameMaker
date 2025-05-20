@@ -1,0 +1,11 @@
+/* カード関連 */
+@import url("./card/card.css");
+
+/* 背景色 */
+@import url("./background/background.css");
+
+/* ボーダー色 */
+@import url("./border/border.css");
+
+/* フォント色 */
+@import url("./font/font.css");

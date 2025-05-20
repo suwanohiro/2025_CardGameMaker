@@ -1,0 +1,15 @@
+.section:nth-child(1) .select_color {
+    aspect-ratio: var(--aspect__1_1);
+    display: inline-block;
+    width: 2.5rem;
+    border-radius: 10rem;
+    transform: translateY(0.5rem);
+
+    margin-inline: 0.5rem;
+    border: 0.0625rem solid white;
+}
+
+.section:nth-child(1) .select_color:hover {
+    cursor: pointer;
+    filter: brightness(50%);
+}

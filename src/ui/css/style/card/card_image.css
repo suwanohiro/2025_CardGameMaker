@@ -1,0 +1,7 @@
+#card #card_image {
+    background-color: lightcoral;
+    aspect-ratio: var(--aspect__4_3);
+    background-size: cover;
+    background-position: 40% 50%;
+    background-repeat: no-repeat;
+}

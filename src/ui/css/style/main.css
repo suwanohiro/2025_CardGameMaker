@@ -1,0 +1,21 @@
+@import url("./all.css");
+@import url("./htmlElements.css");
+
+@import url("./card/main.css");
+
+@import url("./section/main.css");
+
+#main {
+    width: var(--size__dimension__main_width);
+    height: var(--size__dimension__main_height);
+
+    background-color: var(--color__background__base);
+}
+
+#main .section {
+    width: var(--size__dimension__section_width);
+}
+
+#main tr {
+    height: 100%;
+}

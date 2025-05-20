@@ -1,0 +1,9 @@
+/* フォント色 */
+:root {
+    --color__font__default: #FFFFFF;
+
+    /* 効果文の色 */
+    --color__font__bold: #4FC1FF;
+    --color__font__italic: #33BBB0;
+    --color__font__underline: #DCDCAA;
+}

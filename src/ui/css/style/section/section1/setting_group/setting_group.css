@@ -1,0 +1,10 @@
+.setting_group {
+    margin: 2rem;
+    border: 0.0625rem solid var(--color__border__settingGroup);
+    border-radius: 0.25rem;
+    background-color: var(--color__background__settingGroup);
+
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    vertical-align: top;
+}

@@ -1,0 +1,4 @@
+/* 余白 (margin) */
+:root {
+    --size__margin__setting_item: 0.75rem;
+}

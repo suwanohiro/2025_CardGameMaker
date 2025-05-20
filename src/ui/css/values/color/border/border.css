@@ -1,0 +1,6 @@
+/* ボーダー色 */
+:root {
+    --color__border__settingGroup: gray;
+    --color__border__default: #FFFFFF;
+    --color__border__cardName_focus: #0078D4;
+}

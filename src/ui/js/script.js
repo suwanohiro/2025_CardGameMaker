@@ -64,7 +64,13 @@ function name() {
 
 function image() {
     const image = document.getElementById("image");
+    const image_button = document.getElementById("image_button");
     const card_image = document.getElementById("card_image");
+
+    // 画像の選択ボタンをクリックしたときにinput[type="file"]をクリックする
+    image_button.addEventListener("click", () => { image.click(); });
+
+
     image.addEventListener("input", () => {
         // 画像ファイルを読み込んでcard_imageの背景画像として設定する
         const file = image.files[0];

@@ -1,0 +1,4 @@
+/* カードのボーダー色 */
+:root {
+    --color__border__cardInfo: #00000050;
+}

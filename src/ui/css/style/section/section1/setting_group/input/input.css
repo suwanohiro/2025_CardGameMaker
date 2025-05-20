@@ -1,0 +1,14 @@
+.section:nth-child(1) input {
+    width: var(--size__dimension__inputElement_width);
+    background-color: var(--color__background__base);
+}
+
+.section:nth-child(1) input[type="text"] {
+    border: 0;
+    border-bottom: 0.1rem solid white;
+}
+
+.section:nth-child(1) input[type="text"]:focus {
+    outline: none;
+    border-color: var(--color__border__cardName_focus);
+}

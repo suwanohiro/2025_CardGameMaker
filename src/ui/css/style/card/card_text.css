@@ -1,0 +1,14 @@
+#card #card_text {
+    display: block;
+    background-color: var(--color__background__card__light);
+
+    margin-top: 2.5%;
+    flex-grow: 1;
+
+    text-align: left;
+}
+
+#card #card_text * {
+    margin: 0;
+    padding: 0;
+}

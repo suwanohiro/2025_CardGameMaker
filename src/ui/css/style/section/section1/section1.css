@@ -1,0 +1,17 @@
+@import url("./setting_group/main.css");
+@import url("./save/save.css");
+
+.section:nth-child(1) {
+    height: var(--size__dimension__section_height);
+    display: block;
+    border-right: 0.1rem dashed;
+    overflow-y: scroll;
+}
+
+.section:nth-child(1)::-webkit-scrollbar {
+    width: 0;
+}
+
+.section:nth-child(1) * {
+    font-size: 2rem;
+}
