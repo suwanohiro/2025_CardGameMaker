@@ -15,10 +15,14 @@ globalThis.onload = () => {
     image();
     cost();
     save();
+    saveJSON();
     range();
     _setting_title.init();
-    richText(); // 追加
-    console.log(CardColor.length());
+    richText();
+}
+
+function createSaveFileName(card_name, type) {
+    return card_name.value === "" ? `card.${type}` : `${card_name.value}.${type}`;
 }
 
 function save() {
@@ -32,11 +36,38 @@ function save() {
 
         html2canvas(card, { backgroundColor: null }).then(canvas => {
             const link = document.createElement('a');
-            link.download = (card_name.value == "") ? "card.png" : card_name.value + ".png";
+            link.download = createSaveFileName(card_name, "png");
             link.href = canvas.toDataURL('image/png');
+            console.log(link.href);
             link.click();
         });
     });
+}
+
+function saveJSON() {
+    const btn = document.getElementById('save_json');
+    if (!btn) return;
+
+    const name = document.getElementById("name");
+    const card = document.getElementById("card");
+    const cost = document.getElementById("card_cost");
+
+    btn.addEventListener("click", () => {
+        html2canvas(card, { backgroundColor: null }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = createSaveFileName(name, "card");
+
+            const saveData = {
+                name: name.value,
+                color: card.style.backgroundColor,
+                cost: cost.innerHTML,
+                image: canvas.toDataURL('image/png')
+            };
+
+            link.href = URL.createObjectURL(new Blob([JSON.stringify(saveData)], { type: "application/json" }));
+            link.click();
+        });
+    })
 }
 
 function color() {

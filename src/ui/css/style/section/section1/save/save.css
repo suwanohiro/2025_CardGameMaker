@@ -1,5 +1,6 @@
-.section:nth-child(1) #save {
-    width: 100%;
+.section:nth-child(1) #save,
+.section:nth-child(1) #save_json {
+    width: 49.5%;
     margin-bottom: 2.5rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
