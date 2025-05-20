@@ -1,6 +1,7 @@
 #card #card_text {
     display: block;
     background-color: var(--color__background__card__light);
+    color: var(--color__font__rich_text);
 
     margin-top: 2.5%;
     flex-grow: 1;
@@ -11,4 +12,5 @@
 #card #card_text * {
     margin: 0;
     padding: 0;
+    color: var(--color__font__rich_text);
 }

@@ -1,6 +1,7 @@
 /* フォント色 */
 :root {
     --color__font__default: #FFFFFF;
+    --color__font__rich_text: #000000;
 
     /* 効果文の色 */
     --color__font__bold: #4FC1FF;
